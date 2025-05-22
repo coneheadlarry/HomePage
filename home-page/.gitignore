@@ -1,0 +1,5 @@
+.env
+.env.local
+sessions.sqlite
+mydb.sqlite
+node_modules
