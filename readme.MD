@@ -98,7 +98,6 @@ Contributions are welcome! Please open issues and pull requests for features, bu
 - [Next.js](https://nextjs.org/)
 - [Express.js](https://expressjs.com/)
 - [Open-Meteo](https://open-meteo.com/) for weather data
-- All contributors and the open source community!
 
 ---
 
