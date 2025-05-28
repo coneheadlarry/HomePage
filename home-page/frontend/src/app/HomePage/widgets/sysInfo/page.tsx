@@ -9,7 +9,6 @@ type ClientInfo = {
   cpuCores?: number;
 };
 
-// Extend the Navigator type for deviceMemory
 interface NavigatorWithDeviceMemory extends Navigator {
   deviceMemory?: number;
 }
