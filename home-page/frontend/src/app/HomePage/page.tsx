@@ -6,13 +6,15 @@ import styles from "./styles.homepage.module.css";
 import SearchBar from "./components/search";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import LocalTime from "../utils/getTime";
+import WidgetArea from "./components/widMap";
 
 export default function HomePage() {
   const router = useRouter();
   const [role, setRole] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/session`, {
+    fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/session`, {
       credentials: "include",
     })
       .then((res) => {
@@ -35,18 +37,30 @@ export default function HomePage() {
     <>
       <div className="flex justify-center items-center min-h-screen">
         <div
-          className={`flex flex-col h-full min-h-[80vh] w-full md:w-[80vw] ${styles.glass}`}
+          className={`flex flex-col h-[80vh] w-full md:w-[80vw] ${styles.glass}`}
         >
-          {role === "admin" && (
-            <div className="flex justify-end">
-              <Button asChild className="min-h-[2vh] mt-4 mr-4">
-                <Link href="/AdminPanel">Admin Panel</Link>
-              </Button>
+          <div className="h-[45%] flex justify-between items-start p-4">
+            <div>
+              <div>
+                <WidgetArea />
+              </div>
             </div>
-          )}
-          <div className="flex-1">{}</div>
-          <SearchBar />
-          <div className="flex-1 flex  justify-center">
+
+            <div className="flex flex-row items-center gap-4 m-4">
+              <LocalTime />
+              {role === "admin" && (
+                <Button asChild>
+                  <Link href="/AdminPanel">Admin Panel</Link>
+                </Button>
+              )}
+            </div>
+          </div>
+
+          <div className="h-[10%] px-4 flex items-center">
+            <SearchBar />
+          </div>
+
+          <div className="h-[45%] overflow-auto px-4 pb-4">
             <FavBar />
           </div>
         </div>

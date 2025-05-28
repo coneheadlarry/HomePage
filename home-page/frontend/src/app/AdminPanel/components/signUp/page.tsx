@@ -53,9 +53,9 @@ export default function SignUpPage() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="w-full max-w-md rounded-lg bg-card p-8 shadow-md text-card-foreground">
+      <div className="w-full max-w-md min-h-[40vh] rounded-lg bg-card p-8 shadow-md text-card-foreground flex flex-col justify-center">
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 ">
             <FormField
               control={form.control}
               name="username"

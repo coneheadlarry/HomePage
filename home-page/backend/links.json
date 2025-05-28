@@ -1,14 +1,482 @@
 [
   {
-    "icon": "data:image/png;base64,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",
-    "fallback": "YT",
-    "text": "youtube",
-    "link": "https://www.youtube.com/"
+    "icon": "https://www.google.com/favicon.ico",
+    "fallback": "G",
+    "text": "Google",
+    "link": "https://www.google.com/"
   },
   {
-    "icon": "data:image/png;base64,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",
-    "fallback": "git",
+    "icon": "https://github.com/favicon.ico",
+    "fallback": "GH",
     "text": "GitHub",
     "link": "https://github.com/"
+  },
+  {
+    "icon": "https://twitter.com/favicon.ico",
+    "fallback": "TW",
+    "text": "Twitter",
+    "link": "https://twitter.com/"
+  },
+  {
+    "icon": "https://www.facebook.com/favicon.ico",
+    "fallback": "FB",
+    "text": "Facebook",
+    "link": "https://www.facebook.com/"
+  },
+  {
+    "icon": "https://www.linkedin.com/favicon.ico",
+    "fallback": "IN",
+    "text": "LinkedIn",
+    "link": "https://www.linkedin.com/"
+  },
+  {
+    "icon": "https://www.instagram.com/favicon.ico",
+    "fallback": "IG",
+    "text": "Instagram",
+    "link": "https://www.instagram.com/"
+  },
+  {
+    "icon": "https://www.netflix.com/favicon.ico",
+    "fallback": "NF",
+    "text": "Netflix",
+    "link": "https://www.netflix.com/"
+  },
+  {
+    "icon": "https://open.spotify.com/favicon.ico",
+    "fallback": "SP",
+    "text": "Spotify",
+    "link": "https://open.spotify.com/"
+  },
+  {
+    "icon": "https://www.twitch.tv/favicon.ico",
+    "fallback": "TW",
+    "text": "Twitch",
+    "link": "https://www.twitch.tv/"
+  },
+  {
+    "icon": "https://www.pinterest.com/favicon.ico",
+    "fallback": "PT",
+    "text": "Pinterest",
+    "link": "https://www.pinterest.com/"
+  },
+  {
+    "icon": "https://www.amazon.com/favicon.ico",
+    "fallback": "AMZ",
+    "text": "Amazon",
+    "link": "https://www.amazon.com/"
+  },
+  {
+    "icon": "https://www.apple.com/favicon.ico",
+    "fallback": "AP",
+    "text": "Apple",
+    "link": "https://www.apple.com/"
+  },
+  {
+    "icon": "https://www.microsoft.com/favicon.ico",
+    "fallback": "MS",
+    "text": "Microsoft",
+    "link": "https://www.microsoft.com/"
+  },
+  {
+    "icon": "https://www.stackoverflow.com/favicon.ico",
+    "fallback": "SO",
+    "text": "Stack Overflow",
+    "link": "https://stackoverflow.com/"
+  },
+  {
+    "icon": "https://news.ycombinator.com/favicon.ico",
+    "fallback": "HN",
+    "text": "Hacker News",
+    "link": "https://news.ycombinator.com/"
+  },
+  {
+    "icon": "https://www.producthunt.com/favicon.ico",
+    "fallback": "PH",
+    "text": "Product Hunt",
+    "link": "https://www.producthunt.com/"
+  },
+  {
+    "icon": "https://www.dropbox.com/favicon.ico",
+    "fallback": "DB",
+    "text": "Dropbox",
+    "link": "https://www.dropbox.com/"
+  },
+  {
+    "icon": "https://www.slack.com/favicon.ico",
+    "fallback": "SL",
+    "text": "Slack",
+    "link": "https://slack.com/"
+  },
+  {
+    "icon": "https://www.trello.com/favicon.ico",
+    "fallback": "TR",
+    "text": "Trello",
+    "link": "https://trello.com/"
+  },
+  {
+    "icon": "https://www.airbnb.com/favicon.ico",
+    "fallback": "AB",
+    "text": "Airbnb",
+    "link": "https://www.airbnb.com/"
+  },
+  {
+    "icon": "https://www.udemy.com/favicon.ico",
+    "fallback": "UD",
+    "text": "Udemy",
+    "link": "https://www.udemy.com/"
+  },
+  {
+    "icon": "https://www.coursera.org/favicon.ico",
+    "fallback": "CO",
+    "text": "Coursera",
+    "link": "https://www.coursera.org/"
+  },
+  {
+    "icon": "https://www.khanacademy.org/favicon.ico",
+    "fallback": "KA",
+    "text": "Khan Academy",
+    "link": "https://www.khanacademy.org/"
+  },
+  {
+    "icon": "https://www.medium.com/favicon.ico",
+    "fallback": "MD",
+    "text": "Medium",
+    "link": "https://medium.com/"
+  },
+  {
+    "icon": "https://www.nytimes.com/favicon.ico",
+    "fallback": "NYT",
+    "text": "NY Times",
+    "link": "https://www.nytimes.com/"
+  },
+  {
+    "icon": "https://www.bbc.com/favicon.ico",
+    "fallback": "BBC",
+    "text": "BBC",
+    "link": "https://www.bbc.com/"
+  },
+  {
+    "icon": "https://www.cnn.com/favicon.ico",
+    "fallback": "CNN",
+    "text": "CNN",
+    "link": "https://www.cnn.com/"
+  },
+  {
+    "icon": "https://www.weather.com/favicon.ico",
+    "fallback": "WX",
+    "text": "Weather",
+    "link": "https://weather.com/"
+  },
+  {
+    "icon": "https://www.paypal.com/favicon.ico",
+    "fallback": "PP",
+    "text": "PayPal",
+    "link": "https://www.paypal.com/"
+  },
+  {
+    "icon": "https://www.ebay.com/favicon.ico",
+    "fallback": "EB",
+    "text": "eBay",
+    "link": "https://www.ebay.com/"
+  },
+  {
+    "icon": "https://www.quora.com/favicon.ico",
+    "fallback": "QU",
+    "text": "Quora",
+    "link": "https://www.quora.com/"
+  },
+  {
+    "icon": "https://www.tiktok.com/favicon.ico",
+    "fallback": "TT",
+    "text": "TikTok",
+    "link": "https://www.tiktok.com/"
+  },
+  {
+    "icon": "https://www.soundcloud.com/favicon.ico",
+    "fallback": "SC",
+    "text": "SoundCloud",
+    "link": "https://soundcloud.com/"
+  },
+  {
+    "icon": "https://www.dribbble.com/favicon.ico",
+    "fallback": "DR",
+    "text": "Dribbble",
+    "link": "https://dribbble.com/"
+  },
+  {
+    "icon": "https://www.behance.net/favicon.ico",
+    "fallback": "BE",
+    "text": "Behance",
+    "link": "https://www.behance.net/"
+  },
+  {
+    "icon": "https://www.figma.com/favicon.ico",
+    "fallback": "FG",
+    "text": "Figma",
+    "link": "https://www.figma.com/"
+  },
+  {
+    "icon": "https://www.canva.com/favicon.ico",
+    "fallback": "CA",
+    "text": "Canva",
+    "link": "https://www.canva.com/"
+  },
+  {
+    "icon": "https://www.notion.so/favicon.ico",
+    "fallback": "NO",
+    "text": "Notion",
+    "link": "https://www.notion.so/"
+  },
+  {
+    "icon": "https://www.asana.com/favicon.ico",
+    "fallback": "AS",
+    "text": "Asana",
+    "link": "https://asana.com/"
+  },
+  {
+    "icon": "https://www.heroku.com/favicon.ico",
+    "fallback": "HK",
+    "text": "Heroku",
+    "link": "https://www.heroku.com/"
+  },
+  {
+    "icon": "https://www.digitalocean.com/favicon.ico",
+    "fallback": "DO",
+    "text": "DigitalOcean",
+    "link": "https://www.digitalocean.com/"
+  },
+  {
+    "icon": "https://www.vercel.com/favicon.ico",
+    "fallback": "VC",
+    "text": "Vercel",
+    "link": "https://vercel.com/"
+  },
+  {
+    "icon": "https://www.cloudflare.com/favicon.ico",
+    "fallback": "CF",
+    "text": "Cloudflare",
+    "link": "https://www.cloudflare.com/"
+  },
+  {
+    "icon": "https://www.gitlab.com/favicon.ico",
+    "fallback": "GL",
+    "text": "GitLab",
+    "link": "https://gitlab.com/"
+  },
+  {
+    "icon": "https://www.bitbucket.org/favicon.ico",
+    "fallback": "BB",
+    "text": "Bitbucket",
+    "link": "https://bitbucket.org/"
+  },
+  {
+    "icon": "https://www.mozilla.org/favicon.ico",
+    "fallback": "MZ",
+    "text": "Mozilla",
+    "link": "https://www.mozilla.org/"
+  },
+  {
+    "icon": "https://www.w3schools.com/favicon.ico",
+    "fallback": "W3",
+    "text": "W3Schools",
+    "link": "https://www.w3schools.com/"
+  },
+  {
+    "icon": "https://www.freecodecamp.org/favicon.ico",
+    "fallback": "FC",
+    "text": "freeCodeCamp",
+    "link": "https://www.freecodecamp.org/"
+  },
+  {
+    "icon": "https://www.codecademy.com/favicon.ico",
+    "fallback": "CC",
+    "text": "Codecademy",
+    "link": "https://www.codecademy.com/"
+  },
+  {
+    "icon": "https://www.udacity.com/favicon.ico",
+    "fallback": "UD",
+    "text": "Udacity",
+    "link": "https://www.udacity.com/"
+  },
+  {
+    "icon": "https://www.adobe.com/favicon.ico",
+    "fallback": "AD",
+    "text": "Adobe",
+    "link": "https://www.adobe.com/"
+  },
+  {
+    "icon": "https://www.salesforce.com/favicon.ico",
+    "fallback": "SF",
+    "text": "Salesforce",
+    "link": "https://www.salesforce.com/"
+  },
+  {
+    "icon": "https://www.oracle.com/favicon.ico",
+    "fallback": "OR",
+    "text": "Oracle",
+    "link": "https://www.oracle.com/"
+  },
+  {
+    "icon": "https://www.ibm.com/favicon.ico",
+    "fallback": "IBM",
+    "text": "IBM",
+    "link": "https://www.ibm.com/"
+  },
+  {
+    "icon": "https://www.intel.com/favicon.ico",
+    "fallback": "IN",
+    "text": "Intel",
+    "link": "https://www.intel.com/"
+  },
+  {
+    "icon": "https://www.dell.com/favicon.ico",
+    "fallback": "DE",
+    "text": "Dell",
+    "link": "https://www.dell.com/"
+  },
+  {
+    "icon": "https://www.hp.com/favicon.ico",
+    "fallback": "HP",
+    "text": "HP",
+    "link": "https://www.hp.com/"
+  },
+  {
+    "icon": "https://www.samsung.com/favicon.ico",
+    "fallback": "SS",
+    "text": "Samsung",
+    "link": "https://www.samsung.com/"
+  },
+  {
+    "icon": "https://www.sony.com/favicon.ico",
+    "fallback": "SY",
+    "text": "Sony",
+    "link": "https://www.sony.com/"
+  },
+  {
+    "icon": "https://www.nike.com/favicon.ico",
+    "fallback": "NK",
+    "text": "Nike",
+    "link": "https://www.nike.com/"
+  },
+  {
+    "icon": "https://www.adidas.com/favicon.ico",
+    "fallback": "AD",
+    "text": "Adidas",
+    "link": "https://www.adidas.com/"
+  },
+  {
+    "icon": "https://www.zara.com/favicon.ico",
+    "fallback": "ZA",
+    "text": "Zara",
+    "link": "https://www.zara.com/"
+  },
+  {
+    "icon": "https://www.homedepot.com/favicon.ico",
+    "fallback": "HD",
+    "text": "Home Depot",
+    "link": "https://www.homedepot.com/"
+  },
+  {
+    "icon": "https://www.lowes.com/favicon.ico",
+    "fallback": "LW",
+    "text": "Lowe's",
+    "link": "https://www.lowes.com/"
+  },
+  {
+    "icon": "https://www.target.com/favicon.ico",
+    "fallback": "TG",
+    "text": "Target",
+    "link": "https://www.target.com/"
+  },
+  {
+    "icon": "https://www.walmart.com/favicon.ico",
+    "fallback": "WM",
+    "text": "Walmart",
+    "link": "https://www.walmart.com/"
+  },
+  {
+    "icon": "https://www.costco.com/favicon.ico",
+    "fallback": "CO",
+    "text": "Costco",
+    "link": "https://www.costco.com/"
+  },
+  {
+    "icon": "https://www.bestbuy.com/favicon.ico",
+    "fallback": "BB",
+    "text": "Best Buy",
+    "link": "https://www.bestbuy.com/"
+  },
+  {
+    "icon": "https://www.etsy.com/favicon.ico",
+    "fallback": "ET",
+    "text": "Etsy",
+    "link": "https://www.etsy.com/"
+  },
+  {
+    "icon": "https://www.shopify.com/favicon.ico",
+    "fallback": "SH",
+    "text": "Shopify",
+    "link": "https://www.shopify.com/"
+  },
+  {
+    "icon": "https://www.tesla.com/favicon.ico",
+    "fallback": "TS",
+    "text": "Tesla",
+    "link": "https://www.tesla.com/"
+  },
+  {
+    "icon": "https://www.spacex.com/favicon.ico",
+    "fallback": "SX",
+    "text": "SpaceX",
+    "link": "https://www.spacex.com/"
+  },
+  {
+    "icon": "https://www.nasa.gov/favicon.ico",
+    "fallback": "NA",
+    "text": "NASA",
+    "link": "https://www.nasa.gov/"
+  },
+  {
+    "icon": "https://www.npr.org/favicon.ico",
+    "fallback": "NPR",
+    "text": "NPR",
+    "link": "https://www.npr.org/"
+  },
+  {
+    "icon": "https://www.wsj.com/favicon.ico",
+    "fallback": "WSJ",
+    "text": "WSJ",
+    "link": "https://www.wsj.com/"
+  },
+  {
+    "icon": "https://www.bloomberg.com/favicon.ico",
+    "fallback": "BBG",
+    "text": "Bloomberg",
+    "link": "https://www.bloomberg.com/"
+  },
+  {
+    "icon": "https://www.forbes.com/favicon.ico",
+    "fallback": "FB",
+    "text": "Forbes",
+    "link": "https://www.forbes.com/"
+  },
+  {
+    "icon": "https://images.search.yahoo.com/",
+    "fallback": "ggee",
+    "text": "test",
+    "link": "data:image/jpeg;base64,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"
+  },
+  {
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/8/83/Yahoo%21_icon_%282009-2013%29.svg",
+    "fallback": "Y",
+    "text": "yahoo_test",
+    "link": "https://www.yahoo.com/"
+  },
+  {
+    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAYFBMVEUHttX///8As9P///0AsdIAt9QAr9Ht+fv7/v/f9Pjp+PvX8vfQ8Pan4Ozx+vzl9vq65vAavdhQx92e3euP2Oix4+4+wtvH7PR0z+NpzOBXxt6F1+Yzvdgsudd+0eRsyeBKNeBRAAAFLElEQVR4nO2b6basKAxGFUGcxQGnUuv937JBy65RoXr1LfCu7B9nnZrzmRBCQMcBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzgEhpi3430ESjLaHpxWIfB+ToiklTeFg8dC0Sf8N4Y2iT2Pq3omSqi+Em0yb9g3LUEFNHbufSC6jaQO/ZCrZarr3QU7Ay8m0gV/QCyme91nKAhumMwSbCLGmynZ8cidLB9OWakBQ3x7K2Ihnx37ndLmOFOE3mhambVUxU0WA3QnawmrfoD7TVLIQWq1mDLT9skAbe0sCRNX2P5PZqUbM+5h/q0WoGbCN1TVBw3cxJvHcXDHhTL2RcoGEm5aMRnlEl1zgHesTL4f94bemlx+Z/wSq19FPY1bP/dDPNW9DVSUgOVRT572BjIfGcJkK+dys6zFR6hd9lWjEWtjtfusla00U2XhxDOvI44VEuKk0Mlw+71z9mrr1T6x/gYiSLJvfimHkXDWck6UIv+U0VPDMDQcTUdZFblh+/OGGqbR4XtC+TjjI78PAdfkvjH+Du0mzcxFJqjFwoor497YH8ptWSPHobKID0sTxuB8QqTqpeW7GZIcAC5xiToLl2dZEZY3q5Ci4cRWoxUhowjlLtpzhRR0yUB6Qy/F0gFO1GsnLc+xX9j8xNoorqKHmwUM3XeHeKDQNrvTEPMgKZitL6gX1uHlxUWpzM7fKZGGpWVl7y4CxV4wzR9pSPLe1vbXWf27ZftRyMG3ZARqVpc0NPtkcYhsXdRrw3KA+QYdQ4BcsUAyc96rTXvwmyQ7ck4WdwS0csk3+mkFOEC55TD+22LK87bFJt8gF8rpM1kNqR0WXtnGU3fV4GQ0TVjcIEVOtJ/HTYzP012t37YehIVqayO2TZVenKVvhaT0PhXz251nsZk4x1BVvkziPKI3yOGlZWvejdiJa3EmKqZiEL7bLYKDiF4WjM6Rt+LatlOUJ7wp8isS6gdDcRsE2LdwnCPl/QOO08E1bqA8u48O5L6AVOYlz8MgU07iorWgnYs3+igT1kbqH7J6hVBTMmU4hL1viV9OmKqnVQjayi91xhr7QIqrfymY1uHN1dinucDmjW6mIoJJ+uzkm1VgpxiGJIou9It7NlDOOGbF+tc3yqyS1MvkGhRrUlD8XI2vBMl8leI/WqgWx41GTzj8T8QBit4tN27ovy7JLE70DGUe+IWls4oDTMvPLFXrprFUx9rFTtjp9Sra/MVnLxqUB+G2L63FZi/wyDDzl6Gmbz185VW62t6H5J0FD6LpR7b/tWuJUGWyeK2Lpg80jFzqNnNkUqSwZPq1TUJerC09aTy8rajTJBmdQod9nZjS2u3UwGuLV4j0pyyusG51/IxSh6crlcDOznXylbLemR0OimnU8uWlZXcdltU/GoWYynXiBmeFfJQfBLdUocoDUGuRJy9OUsyQMVl/mO5nhzzJWh/GAGmWDfxMbPCRzMWJ+puCBSXEJ5dmZL49oiXfHljbIURF+JWXB1h1YB5Ev1XiuxTuwyNHcGNu0pHZ311rV3sujFmZrjG1UugebvYDbfq8GcmadpObJI2ZnuI9mULU7FzHhfI7+7TgnKucE/Ax3nKw0c7zG0o4k1tt+YOEB5Iz97go04+e4remJ5tK+H5yNWH+Gcf8OxqTpL6JAjiileZjwS1mgc+2pPSOM930f+/IPPrOQBbJtuRLH6gNXX/M3aQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPjr+QeG2zlZQXZc0QAAAABJRU5ErkJggg==",
+    "fallback": "TW",
+    "text": "tailwind",
+    "link": "https://tailwindcss.com/"
   }
 ]
