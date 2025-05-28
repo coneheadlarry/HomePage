@@ -11,8 +11,7 @@
 - **Widgets**: Modular widget system (weather, system info, clock, etc.).
 - **Admin Panel**: Admins can manage users and configure which widgets are available.
 - **Responsive Design**: Works great on desktop and mobile.
-- **Local & Server Storage**: User and widget settings are stored securely on the server.
-- **Open Source**: MIT licensed and ready for community contributions!
+- **Server Storage**: User and widget settings are stored on the server.
 
 ---
 
