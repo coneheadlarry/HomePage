@@ -63,6 +63,9 @@ project already has nodemon and conconancy to set up front and back. Alternate a
 
 ---
 
+7. **Useage:**  
+   To log in you must user admin admin123. Admin account can be created using this or any other admin account. Admin accounts can aslo create user accountns to the admin pannel.
+
 ## Project Structure
 
 ```
